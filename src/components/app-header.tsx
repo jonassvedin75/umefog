@@ -13,9 +13,9 @@ import { ChevronDown, Menu } from "lucide-react";
 import React from "react";
 
 const mainNavLinks = [
-  { href: "#hur-det-gar-till", label: "Så Går Det Till" },
+  { href: "#hur-det-gar-till", label: "Så går det till" },
   { href: "#referenser", label: "Referenser" },
-  { href: "#om-oss", label: "Om Oss" },
+  { href: "#om-oss", label: "Om oss" },
 ];
 
 const servicesLinks = [
@@ -60,7 +60,7 @@ export function AppHeader() {
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <Button asChild className="hidden md:inline-flex">
-            <Link href="#kontakt">Kontakta Oss</Link>
+            <Link href="#kontakt">Kontakt</Link>
           </Button>
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
@@ -97,9 +97,7 @@ export function AppHeader() {
                   </SheetClose>
                 ))}
                 <SheetClose asChild>
-                  <Button asChild className="mt-4">
-                    <Link href="#kontakt">Kontakta Oss</Link>
-                  </Button>
+                   <Link href="#kontakt" className="font-medium text-lg">Kontakt</Link>
                 </SheetClose>
               </div>
             </SheetContent>
