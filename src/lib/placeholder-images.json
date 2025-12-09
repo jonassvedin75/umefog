@@ -1,3 +1,22 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Background image of a modern building facade being worked on.",
+      "imageUrl": "https://images.unsplash.com/photo-1684474439869-325e08624e84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb25zdHJ1Y3Rpb24lMjBidWlsZGluZ3xlbnwwfHx8fDE3NjUyNjc3MjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction building"
+    },
+    {
+      "id": "about-johan",
+      "description": "Portrait of Johan Bergman, founder of Umefog.",
+      "imageUrl": "https://images.unsplash.com/photo-1544168190-79c17527004f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1MjM1ODU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "tullkammaren",
+      "description": "Image of the historic Tullkammaren building in Umeå.",
+      "imageUrl": "https://images.unsplash.com/photo-1616728775583-b19a6af673c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXN0b3JpYyUyMGJ1aWxkaW5nfGVufDB8fHx8MTc2NTE2ODU3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "historic building"
+    }
+  ]
 }
