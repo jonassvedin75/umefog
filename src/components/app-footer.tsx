@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Phone, Mail } from "lucide-react";
 import { CopyrightYear } from "./copyright-year";
+import Image from "next/image";
 
 const footerNav = [
     { href: "#", label: "Hem" },
@@ -17,7 +18,7 @@ export function AppFooter() {
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
-            <h3 className="font-headline text-2xl font-bold">Umefog AB</h3>
+             <Image src="/umefog-logo-light.png" alt="Umefog logo" width={120} height={48} className="w-[120px] h-auto" />
             <div className="space-y-2">
                 <p className="font-semibold">Johan Bergman</p>
                 <a href="tel:0761355152" className="flex items-center gap-2 hover:text-primary text-primary-foreground/90 transition-colors">

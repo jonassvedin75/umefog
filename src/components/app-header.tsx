@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { ChevronDown, Menu } from "lucide-react";
 import React from "react";
+import Image from "next/image";
 
 const mainNavLinks = [
   { href: "#hur-det-gar-till", label: "Så går det till" },
@@ -30,7 +31,7 @@ export function AppHeader() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <span className="font-bold font-headline text-xl">Umefog</span>
+          <Image src="/umefog-logo-dark.png" alt="Umefog logo" width={100} height={40} className="w-[100px] h-auto" />
         </Link>
         <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
           <DropdownMenu>
@@ -72,7 +73,7 @@ export function AppHeader() {
             <SheetContent side="right">
               <SheetClose asChild>
                 <Link href="/" className="mr-6 flex items-center space-x-2">
-                  <span className="font-bold font-headline text-lg">Umefog</span>
+                   <Image src="/umefog-logo-dark.png" alt="Umefog logo" width={100} height={40} className="w-[100px] h-auto" />
                 </Link>
               </SheetClose>
               <div className="flex flex-col space-y-3 mt-6">
