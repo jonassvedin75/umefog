@@ -4,12 +4,12 @@ import { CopyrightYear } from "./copyright-year";
 import Image from "next/image";
 
 const footerNav = [
-    { href: "#", label: "Hem" },
-    { href: "#tjanster", label: "Tjänster" },
-    { href: "#hur-det-gar-till", label: "Så går det till" },
-    { href: "#referenser", label: "Referenser" },
-    { href: "#om-oss", label: "Om oss" },
-    { href: "#kontakt", label: "Kontakt" },
+    { href: "/", label: "Hem" },
+    { href: "/tjanster", label: "Tjänster" },
+    { href: "/#hur-det-gar-till", label: "Så går det till" },
+    { href: "/#referenser", label: "Referenser" },
+    { href: "/#om-oss", label: "Om oss" },
+    { href: "/#kontakt", label: "Kontakt" },
 ];
 
 export function AppFooter() {
@@ -43,11 +43,11 @@ export function AppFooter() {
             <div>
               <h4 className="font-semibold mb-4 font-headline text-lg">Urval av tjänster</h4>
               <ul className="space-y-2">
-                <li><Link href="#nyproduktion" className="hover:text-primary transition-colors text-sm text-primary-foreground/70">Nyproduktion</Link></li>
-                <li><Link href="#renovering" className="hover:text-primary transition-colors text-sm text-primary-foreground/70">Renovering</Link></li>
-                <li><Link href="#nyproduktion-brandtatning-title" className="hover:text-primary transition-colors text-sm text-primary-foreground/70">Brandtätning</Link></li>
-                <li><Link href="#nyproduktion-ljudtatning-title" className="hover:text-primary transition-colors text-sm text-primary-foreground/70">Ljudtätning</Link></li>
-                <li><Link href="#nyproduktion-sagverk-title" className="hover:text-primary transition-colors text-sm text-primary-foreground/70">Sågverksmiljöer</Link></li>
+                <li><Link href="/tjanster/nyproduktion" className="hover:text-primary transition-colors text-sm text-primary-foreground/70">Nyproduktion</Link></li>
+                <li><Link href="/tjanster/renovering" className="hover:text-primary transition-colors text-sm text-primary-foreground/70">Renovering</Link></li>
+                <li><Link href="/tjanster/nyproduktion#brandtatning" className="hover:text-primary transition-colors text-sm text-primary-foreground/70">Brandtätning</Link></li>
+                <li><Link href="/tjanster/nyproduktion#ljudtatning" className="hover:text-primary transition-colors text-sm text-primary-foreground/70">Ljudtätning</Link></li>
+                <li><Link href="/tjanster/nyproduktion#sagverksmiljoer" className="hover:text-primary transition-colors text-sm text-primary-foreground/70">Sågverksmiljöer</Link></li>
               </ul>
             </div>
           </div>
@@ -59,3 +59,5 @@ export function AppFooter() {
     </footer>
   );
 }
+
+    

@@ -18,12 +18,6 @@ import {
   CardFooter
 } from "@/components/ui/card";
 import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
-import {
   Building2,
   Droplets,
   DoorOpen,
@@ -32,7 +26,6 @@ import {
   Waves,
   type LucideIcon,
   Phone,
-  Mail,
   User,
   Building
 } from "lucide-react";
@@ -40,12 +33,12 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ContactForm } from "@/components/contact-form";
 
 const serviceCards: { icon: LucideIcon; title: string; description: string; href: string; }[] = [
-  { icon: Building2, title: "Fasadfogning", description: "Tätning och skydd av fasader i tegel, puts och betongelement.", href: "#nyproduktion-fasadfogning" },
-  { icon: Droplets, title: "Golvfogning", description: "Fogning av industrigolv där täthet krävs vid spolning och vätskeexponering.", href: "#nyproduktion-golvfogning" },
-  { icon: DoorOpen, title: "Dörr- och fönsterfogning", description: "Energieffektiv tätning runt dörrar och fönster i alla typer av fastigheter.", href: "#nyproduktion-dorr-fonster" },
-  { icon: Bath, title: "Kök- och badrumsfogning", description: "Fuktanpassad fogning i kök och våtutrymmen.", href: "#nyproduktion-kok-badrum" },
-  { icon: Flame, title: "Brandtätning", description: "Säker tätning av genomföringar i brandklassade konstruktioner.", href: "#nyproduktion-brandtatning" },
-  { icon: Waves, title: "Ljudtätning", description: "Dämpning av ljud för bättre arbetsmiljö och ökad sekretess.", href: "#nyproduktion-ljudtatning" },
+  { icon: Building2, title: "Fasadfogning", description: "Tätning och skydd av fasader i tegel, puts och betongelement.", href: "/tjanster/nyproduktion#fasadfogning" },
+  { icon: Droplets, title: "Golvfogning", description: "Fogning av industrigolv där täthet krävs vid spolning och vätskeexponering.", href: "/tjanster/nyproduktion#golvfogning" },
+  { icon: DoorOpen, title: "Dörr- och fönsterfogning", description: "Energieffektiv tätning runt dörrar och fönster i alla typer av fastigheter.", href: "/tjanster/nyproduktion#dorr-fonster" },
+  { icon: Bath, title: "Kök- och badrumsfogning", description: "Fuktanpassad fogning i kök och våtutrymmen.", href: "/tjanster/nyproduktion#kok-badrum" },
+  { icon: Flame, title: "Brandtätning", description: "Säker tätning av genomföringar i brandklassade konstruktioner.", href: "/tjanster/nyproduktion#brandtatning" },
+  { icon: Waves, title: "Ljudtätning", description: "Dämpning av ljud för bättre arbetsmiljö och ökad sekretess.", href: "/tjanster/nyproduktion#ljudtatning" },
 ];
 
 const faqItems = [
@@ -139,115 +132,9 @@ function ServicesSection() {
   );
 }
 
-const ServiceDetail = ({ id, title, children, titleId }: { id: string, titleId: string, title: string, children: React.ReactNode }) => (
-  <div id={id} className="max-w-3xl mx-auto">
-    <h3 id={titleId} className="font-headline text-2xl md:text-3xl font-bold">{title}</h3>
-    <div className="mt-4 text-lg text-muted-foreground space-y-4">{children}</div>
-  </div>
-);
-
-function DetailedServicesSection() {
-  const nyproduktionServices = (
-    <>
-      <ServiceDetail id="nyproduktion-fasadfogning" titleId="nyproduktion-fasadfogning-title" title="Fasadfogning (mjukfogning)">
-        <p>Fastigheter med fasader av tegel, puts eller betongelement behöver fogas för att skapa ett tätt och skyddande klimatskal. Eftersom fasaden påverkas av temperaturväxlingar och rör sig är fogen flexibel och anpassas efter dessa rörelser. I en nyproduktion kan fogningsarbetet påbörjas direkt när väggarna är färdigställda.</p>
-        <p>Rätt utförd fogning spelar en central roll i att förhindra vatten- och värmeläckage, förbättra fastighetens energieffektivitet och säkra ett långsiktigt skydd mot fuktskador. Det är en viktig del i att skapa en hållbar fastighet som står emot både väder och vind.</p>
-      </ServiceDetail>
-      <ServiceDetail id="nyproduktion-dorr-fonster" titleId="nyproduktion-dorr-fonster-title" title="Dörr- och fönsterfogning">
-        <p>Dörrar och fönster i flerbostadshus, kommersiella fastigheter och industrilokaler behöver fogas för att skapa täta och energieffektiva anslutningar mellan karm och fasad. Oavsett om det handlar om plast- och träfönster i bostäder eller metalldörrar i industriella miljöer är fogningen en avgörande del för att förhindra drag, fuktinträngning och värmeförluster. Eftersom fastigheten rör sig vid temperaturförändringar måste fogen vara flexibel och anpassad för att klara dessa rörelser utan att spricka eller släppa.</p>
-        <p>Korrekt utförd dörr- och fönsterfogning bidrar till en förbättrad energieffektivitet, ett behagligare inomhusklimat och ett långsiktigt skydd mot fuktskador. Det är en viktig åtgärd för att skapa både komfort och hållbarhet i fastigheten över tid.</p>
-      </ServiceDetail>
-      <ServiceDetail id="nyproduktion-golvfogning" titleId="nyproduktion-golvfogning-title" title="Golvfogning">
-        <p>I industrimiljöer där golv regelbundet spolas av eller utsätts för väta är det viktigt att övergången mellan golv och vägg är helt tät. Golvfogning förhindrar att vatten tränger ner i konstruktionen vilket annars kan leda till fuktskador, försämrad hygien och i värsta fall påverka golvets och fastighetens hållbarhet.</p>
-        <p>Genom att täta golvets anslutningar skapas en skyddande barriär som klarar både vätska, belastning och rörelser mellan olika material. Rätt utförd golvtätning bidrar till en mer slitstark miljö, enklare rengöring och en säkrare arbetsplats, särskilt i lokaler där höga krav ställs på hygien och funktion.</p>
-      </ServiceDetail>
-      <ServiceDetail id="nyproduktion-kok-badrum" titleId="nyproduktion-kok-badrum-title" title="Kök- och badrumsfogning">
-        <p>Vid nybyggnation av kök och badrum är korrekt fogning en avgörande del för att skapa täta och hållbara ytor. I utrymmen där kakel och klinker möter väggar, hörn eller stänkskydd behövs fogar som förhindrar fuktinträngning. Detta är särskilt viktigt i miljöer som dagligen utsätts för vatten, ånga och temperaturskillnader.</p>
-        <p>Rätt utförd fogning bidrar till att skydda underliggande material mot fuktskador, förlänger livslängden på ytskikten och skapar en snygg och hygienisk finish. Det är en viktig detalj som ser till att kök och badrum håller långsiktigt.</p>
-      </ServiceDetail>
-      <ServiceDetail id="nyproduktion-brandtatning" titleId="nyproduktion-brandtatning-title" title="Brandtätning">
-        <p>Brandtätning är nödvändig vid genomföringar i brandklassade väggar, golv och tak där exempelvis ventilationsrör, vattenledningar eller elkablar passerar genom konstruktionen. För att upprätthålla fastighetens brandskydd måste dessa öppningar tätas med särskilda brandklassade fogar som förhindrar att eld, rök och heta gaser sprids mellan olika brandceller.</p>
-        <p>Korrekt utförd brandtätning är avgörande för att konstruktionen ska behålla sin brandtekniska funktion vid en eventuell brand. Umefog är utbildade i Sikas brandtätningssystem och arbetar enligt gällande krav och standarder för att säkerställa ett tryggt och långsiktigt skydd i fastigheten.</p>
-      </ServiceDetail>
-      <ServiceDetail id="nyproduktion-ljudtatning" titleId="nyproduktion-ljudtatning-title" title="Ljudtätning">
-        <p>I industrier, kontorsbyggnader och andra miljöer där det ställs höga krav på arbetsro och integritet är ljudtätning en viktig del av fastighetens funktion. Genom att täta fogar och genomföringar minskas spridningen av både buller och oönskat ljud mellan rum och avdelningar vilket bidrar till en mer behaglig miljö.</p>
-        <p>Rätt utförd ljudtätning skapar inte bara ett lugnare arbetsklimat utan säkerställer även att samtal och känslig information inte sprids till närliggande utrymmen.</p>
-      </ServiceDetail>
-      <ServiceDetail id="nyproduktion-sagverk" titleId="nyproduktion-sagverk-title" title="Sågverksmiljöer">
-        <p>Umefog har specialkompetens inom arbete i sågverksindustrier och lokaler för virkestorkar. Det är miljöer som ställer extremt höga krav på fogarna då de utsätts för mycket höga temperaturer på uppemot 100 grader samt syror som successivt bryter ner materialet vilket gör att de ofta är utslitna redan efter cirka tre år.</p>
-        <p>Om fogarna inte underhålls regelbundet riskerar stora mängder värme att läcka ut vilket leder till onödig energiförlust och sämre torkeffektivitet. Det i sin tur förlänger torktiden för virket och påverkar både produktion och ekonomi.</p>
-      </ServiceDetail>
-    </>
-  );
-  
-    const renoveringServices = (
-    <>
-      <ServiceDetail id="renovering-fasadfog" titleId="renovering-fasadfog-title" title="Renovering av fasadfog">
-        <p>Fastigheter med fasader av tegel, puts eller betongelement behöver med tiden få sina fogar renoverade för att behålla ett tätt och skyddande klimatskal. Eftersom fasaden påverkas av temperaturväxlingar och rör sig är fogen flexibel och anpassas efter dessa rörelser. Vid renovering av befintliga fastigheter avlägsnas gamla, uttjänta fogar och ersätts med nya för att återställa fasadens täthet och funktion.</p>
-        <p>Rätt utförd fogrenovering spelar en central roll i att förhindra vatten- och luftläckage, förbättra fastighetens energieffektivitet och säkra ett långsiktigt skydd mot fuktskador. Det är en viktig del i att bevara en hållbar fastighet som står emot både väder och vind.</p>
-      </ServiceDetail>
-      <ServiceDetail id="renovering-dorr-fonster" titleId="renovering-dorr-fonster-title" title="Renovering av dörr- och fönsterfogar">
-        <p>Dörrar och fönster i flerbostadshus, kommersiella fastigheter och industrilokaler behöver med tiden få sina fogar utbytta för att bibehålla täta och energieffektiva anslutningar mellan karm och fasad. Oavsett om det handlar om plast- och träfönster i bostäder eller metalldörrar i industriella miljöer är fogrenovering en avgörande del för att motverka drag, fuktinträngning och värmeförluster.</p>
-        <p>Eftersom fastigheten rör sig vid temperaturförändringar måste den nya fogen vara flexibel och anpassad för att klara dessa rörelser utan att spricka eller släppa. Korrekt utförd fogrenovering bidrar till förbättrad energieffektivitet, ett behagligare inomhusklimat och ett långsiktigt skydd mot fuktskador.</p>
-      </ServiceDetail>
-      <ServiceDetail id="renovering-golvfogar" titleId="renovering-golvfogar-title" title="Renovering av golvfogar">
-        <p>I industrimiljöer där golv regelbundet spolas av eller utsätts för väta behöver befintliga fogar ses över och vid behov renoveras för att säkerställa full täthet mellan golv och vägg. Slitna eller skadade fogar kan annars leda till att vätskor tränger ner i konstruktionen vilket kan orsaka fuktskador, försämrad hygien och påverka fastighetens hållbarhet.</p>
-        <p>Genom att renovera golvfogar återställs en skyddande barriär som klarar både vätska, belastning och rörelser mellan olika material. Rätt utförd golvfogning bidrar till en mer slitstark miljö, enklare rengöring och en säkrare arbetsplats.</p>
-      </ServiceDetail>
-      <ServiceDetail id="renovering-kok-badrum" titleId="renovering-kok-badrum-title" title="Renovering av kök- och badrumsfogar">
-        <p>Vid renovering av kök och badrum är fogar en viktig del för att säkerställa täta och hållbara ytor. I utrymmen där kakel och klinker möter väggar, hörn eller stänkskydd behöver gamla fogar ofta bytas ut för att förhindra fuktinträngning. Detta är särskilt viktigt i miljöer som dagligen utsätts för vatten, ånga och temperaturskillnader.</p>
-        <p>Rätt utförd omfogning skyddar underliggande material mot fuktskador, och förlänger livslängden på ytskikten.</p>
-      </ServiceDetail>
-      <ServiceDetail id="renovering-brandtatning" titleId="renovering-brandtatning-title" title="Brandtätning i befintliga fastigheter">
-        <p>Vid ombyggnationer, renoveringar eller kompletterande installationer i befintliga fastigheter uppstår ibland nya genomföringar i brandklassade väggar, golv och tak. För att upprätthålla fastighetens brandskydd måste dessa öppningar tätas med brandklassade fogar som förhindrar att eld, rök och heta gaser sprids mellan brandceller.</p>
-        <p>Korrekt utförd brandtätning är avgörande för att den befintliga konstruktionen ska behålla sin brandtekniska funktion. Umefog är utbildade i Sikas brandtätningssystem och arbetar enligt gällande krav och standarder för ett tryggt och långsiktigt skydd.</p>
-      </ServiceDetail>
-      <ServiceDetail id="renovering-ljudtatning" titleId="renovering-ljudtatning-title" title="Ljudtätning i befintliga fastigheter">
-        <p>I befintliga industrier, kontorsbyggnader och andra verksamhetsmiljöer kan behovet av förbättrad ljudisolering uppstå över tid. Genom att renovera och komplettera fogar och genomföringar minskas spridningen av både buller och oönskat ljud mellan rum och avdelningar.</p>
-        <p>Rätt utförd ljudtätning bidrar till ett lugnare arbetsklimat och säkerställer att samtal och känslig information inte sprids till närliggande utrymmen vilket är särskilt viktigt i miljöer med höga krav på arbetsro och integritet.</p>
-      </ServiceDetail>
-      <ServiceDetail id="renovering-sagverk" titleId="renovering-sagverk-title" title="Sågverksmiljöer">
-        <p>Umefog har specialkompetens inom arbete i sågverksindustrier och lokaler för virkestorkar. Det är miljöer som ställer extremt höga krav på fogarna då de utsätts för mycket höga temperaturer på uppemot 100 grader samt syror som successivt bryter ner materialet vilket gör att de ofta är utslitna redan efter cirka tre år.</p>
-        <p>Om fogarna inte underhålls regelbundet riskerar stora mängder värme att läcka ut vilket leder till onödig energiförlust och sämre torkeffektivitet. Det i sin tur förlänger torktiden för virket och påverkar både produktion och ekonomi.</p>
-      </ServiceDetail>
-    </>
-  );
-
-  return (
-    <section className="py-16 md:py-24 bg-secondary">
-      <div className="container">
-        <Tabs defaultValue="nyproduktion" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto h-12">
-            <TabsTrigger value="nyproduktion" className="h-10 text-base">Nyproduktion</TabsTrigger>
-            <TabsTrigger value="renovering" className="h-10 text-base">Renovering</TabsTrigger>
-          </TabsList>
-          <TabsContent value="nyproduktion" id="nyproduktion" className="mt-12 text-center">
-            <div className="max-w-3xl mx-auto">
-              <p className="text-lg text-muted-foreground mb-12">Fogning och tätning kan tyckas vara en liten del av kostnaden vid nyproduktion men dess betydelse är desto större. Med noggrant utvalda material, korrekt dimensionering och lång erfarenhet skapar Umefog hållbara lösningar som minskar framtida skador och kostsamma renoveringar av fastigheter.</p>
-            </div>
-            <div className="space-y-16">{nyproduktionServices}</div>
-            <div className="text-center mt-16">
-              <Button size="lg" asChild><Link href="#kontakt">Kontakt</Link></Button>
-            </div>
-          </TabsContent>
-          <TabsContent value="renovering" id="renovering" className="mt-12 text-center">
-            <div className="max-w-3xl mx-auto">
-              <p className="text-lg text-muted-foreground mb-12">Betydelsen av fogning och tätning vid renoveringar i befintliga fastigheter är stor. Med noggrant utvalda material, korrekt dimensionering och lång erfarenhet skapar Umefog hållbara lösningar som förebygger fortsatta skador och minskar risken för kostsamma framtida åtgärder.</p>
-            </div>
-            <div className="space-y-16">{renoveringServices}</div>
-             <div className="text-center mt-16">
-              <Button size="lg" asChild><Link href="#kontakt">Kontakt</Link></Button>
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
-    </section>
-  );
-}
-
 function HowItWorksSection() {
   return (
-    <section id="hur-det-gar-till" className="py-16 md:py-24 bg-background">
+    <section id="hur-det-gar-till" className="py-16 md:py-24 bg-secondary">
       <div className="container max-w-4xl mx-auto">
         <div className="text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">Så går det till</h2>
@@ -274,7 +161,7 @@ function HowItWorksSection() {
 function AboutSection() {
   const aboutImage = PlaceHolderImages.find(img => img.id === 'about-johan');
   return (
-    <section id="om-oss" className="py-16 md:py-24 bg-secondary">
+    <section id="om-oss" className="py-16 md:py-24 bg-background">
       <div className="container">
         <div className="grid md:grid-cols-5 gap-8 md:gap-16 items-center">
           <div className="md:col-span-2">
@@ -301,7 +188,7 @@ function AboutSection() {
 function ReferencesSection() {
   const tullkammarenImage = PlaceHolderImages.find(img => img.id === 'tullkammaren');
   return (
-    <section id="referenser" className="py-16 md:py-24 bg-background">
+    <section id="referenser" className="py-16 md:py-24 bg-secondary">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">Referenser</h2>
@@ -366,7 +253,7 @@ function ReferencesSection() {
 
 function ContactSection() {
     return (
-        <section id="kontakt" className="py-16 md:py-24 bg-secondary">
+        <section id="kontakt" className="py-16 md:py-24 bg-background">
             <div className="container grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">Kontakt</h2>
@@ -405,7 +292,6 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <ServicesSection />
-        <DetailedServicesSection />
         <HowItWorksSection />
         <AboutSection />
         <ReferencesSection />
@@ -415,3 +301,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

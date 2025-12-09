@@ -14,15 +14,15 @@ import React from "react";
 import Image from "next/image";
 
 const mainNavLinks = [
-  { href: "#hur-det-gar-till", label: "Så går det till" },
-  { href: "#referenser", label: "Referenser" },
-  { href: "#om-oss", label: "Om oss" },
+  { href: "/#hur-det-gar-till", label: "Så går det till" },
+  { href: "/#referenser", label: "Referenser" },
+  { href: "/#om-oss", label: "Om oss" },
 ];
 
 const servicesLinks = [
-    { href: "#tjanster", label: "Alla tjänster" },
-    { href: "#nyproduktion", label: "Nyproduktion" },
-    { href: "#renovering", label: "Renovering" },
+    { href: "/tjanster", label: "Alla tjänster" },
+    { href: "/tjanster/nyproduktion", label: "Nyproduktion" },
+    { href: "/tjanster/renovering", label: "Renovering" },
 ];
 
 export function AppHeader() {
@@ -78,7 +78,7 @@ export function AppHeader() {
               </SheetClose>
               <div className="flex flex-col space-y-3 mt-6">
                 <SheetClose asChild>
-                  <Link href="#tjanster" className="font-medium text-lg">Tjänster</Link>
+                  <Link href="/tjanster" className="font-medium text-lg">Tjänster</Link>
                 </SheetClose>
                 <div className="flex flex-col space-y-2 pl-4 border-l">
                     {servicesLinks.map((link) => (
@@ -98,7 +98,7 @@ export function AppHeader() {
                   </SheetClose>
                 ))}
                 <SheetClose asChild>
-                   <Link href="#kontakt" className="font-medium text-lg">Kontakt</Link>
+                   <Link href="/#kontakt" className="font-medium text-lg">Kontakt</Link>
                 </SheetClose>
               </div>
             </SheetContent>
@@ -108,3 +108,5 @@ export function AppHeader() {
     </header>
   );
 }
+
+    
