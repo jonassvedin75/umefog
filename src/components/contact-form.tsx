@@ -15,6 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useEffect, useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Namn måste vara minst 2 tecken." }),
@@ -24,6 +25,12 @@ const formSchema = z.object({
 
 export function ContactForm() {
     const { toast } = useToast();
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -41,6 +48,10 @@ export function ContactForm() {
             description: "Tack för ditt meddelande. Vi återkommer så snart som möjligt.",
         });
         form.reset();
+    }
+
+    if (!isClient) {
+        return null;
     }
 
     return (
