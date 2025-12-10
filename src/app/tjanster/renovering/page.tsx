@@ -27,13 +27,13 @@ export default function RenoveringPage() {
                
                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
                  <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                   <Image src="/IMG_7036.jpg" alt="Renoveringsarbete" fill className="object-cover" />
+                   <Image src="/IMG_7036.jpg" alt="Renovering av fasadfog - effektivt skydd mot värmeläckage och fukt" fill className="object-cover" />
                  </div>
                  <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                   <Image src="/IMG_6763.jpg" alt="Renoveringsarbete" fill className="object-cover" />
+                   <Image src="/IMG_6763.jpg" alt="Fönsterfogrenovering - brandtätning och ljudtätning" fill className="object-cover" />
                  </div>
                  <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                   <Image src="/IMG_4105.jpg" alt="Renoveringsarbete" fill className="object-cover" />
+                   <Image src="/IMG_4105.jpg" alt="Badrumsfogrenovering - professionellt fuktskydd och fukttätning" fill className="object-cover" />
                  </div>
                </div>
             </div>

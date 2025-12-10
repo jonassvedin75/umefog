@@ -3,10 +3,15 @@ import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Umefog Webbplats',
-  description: 'Specialister på tätning och fogning i norra Sverige.',
+  title: 'Umefog - Fasadfogning & Brandtätning i Umeå | Professionell Fuktskydd',
+  description: 'Umefog erbjuder professionell fasadfogning, brandtätning, ljudtätning och skydd mot värmeläckage i Umeå och norra Sverige. Kontakta oss för offert!',
   icons: {
-    icon: '/Umefog_logo.png',
+    icon: [
+      { url: '/Umefog_logo.png', sizes: 'any' },
+      { url: '/Umefog_logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/Umefog_logo.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: '/Umefog_logo.png',
   },
 };
 

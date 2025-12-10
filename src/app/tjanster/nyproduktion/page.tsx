@@ -27,16 +27,16 @@ export default function NyproduktionPage() {
                
                <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
                  <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                   <Image src="/IMG_7606.jpg" alt="Fogningsarbete" fill className="object-cover" />
+                   <Image src="/IMG_7606.jpg" alt="Brandtätning och ljudtätning i nyproduktion - skydd mot fukt och värmeläckage" fill className="object-cover" />
                  </div>
                  <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                   <Image src="/IMG_7603.jpg" alt="Fogningsarbete" fill className="object-cover" />
+                   <Image src="/IMG_7603.jpg" alt="Fasadfogning av betongfasad - energieffektivt fuktskydd" fill className="object-cover" />
                  </div>
                  <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                   <Image src="/IMG_7602.jpg" alt="Fogningsarbete" fill className="object-cover" />
+                   <Image src="/IMG_7602.jpg" alt="Dörr- och fönsterfogning - tätning mot drag och värmeläckage" fill className="object-cover" />
                  </div>
                  <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                   <Image src="/IMG_7601.jpg" alt="Fogningsarbete" fill className="object-cover" />
+                   <Image src="/IMG_7601.jpg" alt="Golvfogning i industrimiljö - professionell fukttätning" fill className="object-cover" />
                  </div>
                </div>
             </div>

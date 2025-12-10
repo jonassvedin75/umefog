@@ -15,7 +15,6 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  CardFooter
 } from "@/components/ui/card";
 import {
   Building2,
@@ -30,20 +29,26 @@ import {
   Building
 } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
+import type { Metadata } from 'next';
 
-const serviceCards: { icon: LucideIcon; title: string; description: string; href: string; }[] = [
-  { icon: Building2, title: "Fasadfogning", description: "Tätning och skydd av fasader i tegel, puts och betongelement.", href: "/tjanster/nyproduktion#fasadfogning" },
-  { icon: Droplets, title: "Golvfogning", description: "Fogning av industrigolv där täthet krävs vid spolning och vätskeexponering.", href: "/tjanster/nyproduktion#golvfogning" },
-  { icon: DoorOpen, title: "Dörr- och fönsterfogning", description: "Energieffektiv tätning runt dörrar och fönster i alla typer av fastigheter.", href: "/tjanster/nyproduktion#dorr-fonster" },
-  { icon: Bath, title: "Kök- och badrumsfogning", description: "Fuktanpassad fogning i kök och våtutrymmen.", href: "/tjanster/nyproduktion#kok-badrum" },
-  { icon: Flame, title: "Brandtätning", description: "Säker tätning av genomföringar i brandklassade konstruktioner.", href: "/tjanster/nyproduktion#brandtatning" },
-  { icon: Waves, title: "Ljudtätning", description: "Dämpning av ljud för bättre arbetsmiljö och ökad sekretess.", href: "/tjanster/nyproduktion#ljudtatning" },
+export const metadata: Metadata = {
+  title: 'Umefog Luleå - Fasadfogning & Brandtätning | Professionell Fuktskydd',
+  description: 'Umefog erbjuder professionell fasadfogning, brandtätning, ljudtätning och skydd mot värmeläckage i Luleå. Kontakta oss för offert!',
+};
+
+const serviceCards: { icon: LucideIcon; title: string; description: string; }[] = [
+  { icon: Building2, title: "Fasadfogning", description: "Tätning och skydd av fasader i tegel, puts och betongelement." },
+  { icon: Droplets, title: "Golvfogning", description: "Fogning av industrigolv där täthet krävs vid spolning och vätskeexponering." },
+  { icon: DoorOpen, title: "Dörr- och fönsterfogning", description: "Energieffektiv tätning runt dörrar och fönster i alla typer av fastigheter." },
+  { icon: Bath, title: "Kök- och badrumsfogning", description: "Fuktanpassad fogning i kök och våtutrymmen." },
+  { icon: Flame, title: "Brandtätning", description: "Säker tätning av genomföringar i brandklassade konstruktioner." },
+  { icon: Waves, title: "Ljudtätning", description: "Dämpning av ljud för bättre arbetsmiljö och ökad sekretess." },
 ];
 
 const faqItems = [
   {
-    question: "Hur beställer jag arbetet hos Umefog?",
-    answer: "Fastighetsägare, byggentreprenörer eller industrier som har behov av fogning och tätning i nyproducerade eller befintliga fastigheter skickar in underlag till Umefog. Därefter väljer de upplägg beroende på behov och projektets omfattning. De kan välja ett fast pris där vi beräknar kostnader för material, arbete och övriga moment, eller ett löpande pris där kunden får ta del av en tydlig prislista som specificerar kostnader för material, arbetstid och tillkommande insatser."
+    question: "Hur beställer jag arbetet hos Umefog i Luleå?",
+    answer: "Fastighetsägare, byggentreprenörer eller industrier i Luleå och omnejd som har behov av fogning och tätning skickar in underlag till Umefog. Därefter väljer de upplägg beroende på behov och projektets omfattning. De kan välja ett fast pris där vi beräknar kostnader för material, arbete och övriga moment, eller ett löpande pris där kunden får ta del av en tydlig prislista."
   },
   {
     question: "Hur säkerställer Umefog rätt lösning för varje fastighet?",
@@ -51,15 +56,15 @@ const faqItems = [
   },
   {
     question: "Hur länge håller fogarna?",
-    answer: "Fogarnas livslängd varierar men som tumregel bör de inspekteras okulärt ungefär vart femte år. Hur länge fogarna håller påverkas både av vilken verksamhet som pågår i fastigheten, till exempel slitage och fukt i invändiga miljöer samt var i landet fastigheten ligger, där temperaturväxlingar och väderpåverkan spelar stor roll för utvändiga fogar. Redan vid en enkel genomgång går det att upptäcka tecken på slitage som sprickor, missfärgning, att fogen lossnat från underlaget eller blivit vit och porös."
+    answer: "Fogarnas livslängd varierar men som tumregel bör de inspekteras okulärt ungefär vart femte år. Hur länge fogarna håller påverkas av vilken verksamhet som pågår i fastigheten, till exempel slitage och fukt i invändiga miljöer samt temperaturväxlingar och väderpåverkan för utvändiga fogar. Redan vid en enkel genomgång går det att upptäcka tecken på slitage som sprickor, missfärgning eller att fogen lossnat från underlaget."
   },
   {
     question: "Vad händer om fogarna inte renoveras i tid?",
-    answer: "Om slitna fogar inte åtgärdas i tid ökar risken för att regnvatten tränger in i konstruktionen vilket kan leda till fuktskador i fasaden och i förlängningen kostsamma renoveringar. Regelbunden kontroll och underhåll är därför en viktig del i att bevara fastighetens skick och funktion över tid."
+    answer: "Om slitna fogar inte åtgärdas i tid ökar risken för att regnvatten tränger in i konstruktionen, vilket kan leda till fuktskador i fasaden och i förlängningen kostsamma renoveringar. Regelbunden kontroll och underhåll är därför en viktig del i att bevara fastighetens skick och funktion över tid."
   },
   {
     question: "Vilka produkter använder Umefog?",
-    answer: "Umefog arbetar med noggrant utvalda produkter från Sika, Soudal, HABE och Byggtema, leverantörer som är kända för hög kvalitet, lång hållbarhet och lösningar anpassade för professionell fogning och tätning i både bygg- och industrimiljöer. Sika är en global ledande aktör inom limning, tätning och skydd av fastigheter och konstruktioner. Soudal är Europas största oberoende tillverkare av fogmassor och lim med stor erfarenhet inom kemiska byggspecialiteter. Tillsammans ger dessa leverantörer Umefog möjlighet att erbjuda säkra, hållbara och skräddarsydda lösningar för varje fastighet."
+    answer: "Umefog arbetar med noggrant utvalda produkter från Sika, Soudal, HABE och Byggtema, leverantörer som är kända för hög kvalitet, lång hållbarhet och lösningar anpassade för professionell fogning och tätning i både bygg- och industrimiljöer. Tillsammans ger dessa leverantörer Umefog möjlighet att erbjuda säkra, hållbara och skräddarsydda lösningar för varje fastighet."
   }
 ];
 
@@ -71,7 +76,7 @@ function HeroSection() {
     <section className="relative h-[75vh] min-h-[500px] flex items-center justify-center text-center text-white">
       <Image
         src="/Tullkammaren.jpeg"
-        alt="Fasadfogning och brandtätning av historisk fastighet i Umeå - professionell fuktskydd och värmeisolättring"
+        alt="Fasadfogning och brandtätning i Luleå - professionell fuktskydd och värmeisolering"
         fill
         className="object-cover brightness-75"
         priority
@@ -79,10 +84,10 @@ function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/50 to-slate-900/70" />
       <div className="relative z-10 max-w-4xl px-6">
         <h1 className="font-headline text-4xl sm:text-5xl md:text-7xl font-bold leading-tight tracking-tight">
-          Specialister på tätning och fogning i Umeå
+          Specialister på tätning och fogning i Luleå
         </h1>
         <p className="mt-6 text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed">
-           Umefog är specialister på fasadfogning, brandtätning och ljudtätning i Umeå och norra Sverige. Vi erbjuder professionellt fuktskydd och skydd mot värmeläckage för både nyproduktion och befintliga fastigheter.
+           Umefog är specialister på fasadfogning, brandtätning och ljudtätning i Luleå och Norrbotten. Vi erbjuder professionellt fuktskydd och skydd mot värmeläckage för både nyproduktion och befintliga fastigheter i regionen.
         </p>
         <Button asChild size="lg" className="mt-10 text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all">
           <Link href="#kontakt">Kontakta oss</Link>
@@ -99,7 +104,7 @@ function ServicesSection() {
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl md:text-5xl font-bold tracking-tight">Våra tjänster</h2>
           <p className="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed">
-            Vi utför uppdrag från Kiruna i norr till Sundsvall i söder. Med rätt material och lång erfarenhet skapar vi hållbara lösningar som skyddar fastigheter mot fukt, värmeläckage, brand och ljud.
+            Vi arbetar i hela Luleåsområdet med allt från fasadfogning till brandtätning. Med rätt material och lång erfarenhet skapar vi hållbara lösningar som skyddar fastigheter mot fukt, värmeläckage, brand och ljud.
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -166,8 +171,8 @@ function AboutSection() {
           <div className="md:col-span-3">
             <h2 className="font-headline text-3xl md:text-5xl font-bold tracking-tight">Om oss</h2>
             <div className="mt-8 text-lg text-slate-600 space-y-5 leading-relaxed">
-              <p>Johan Bergman har en bakgrund som arbetande konsult inom byggbranchen och grundade Umefog 2020 med ambitionen att erbjuda professionella fognings- och tätningstjänster till fastighetsägare och byggföretag i norra Sverige. Företaget består idag av ett mindre team och arbetar med alla typer av fastigheter som flerbostadshus, kommersiella fastigheter och industrilokaler, med särskild kompetens inom sågverksmiljöer och andra krävande industrimiljöer.</p>
-              <p>För Umefog är långsiktiga kundrelationer en självklar del av verksamheten. Genom tydlig kommunikation, hög yrkesskicklighet och ett personligt bemötande strävar företaget efter att leverera arbeten med hög kvalitet, något som uppskattas av kunderna och bidrar till ett bra samarbete.</p>
+              <p>Johan Bergman har en bakgrund som arbetande konsult inom byggbranchen och grundade Umefog 2020 med ambitionen att erbjuda professionella fognings- och tätningstjänster till fastighetsägare och byggföretag i norra Sverige. Företaget består idag av ett mindre team och arbetar med alla typer av fastigheter som flerbostadshus, kommersiella fastigheter och industrilokaler.</p>
+              <p>För Umefog är långsiktiga kundrelationer en självklar del av verksamheten. Genom tydlig kommunikation, hög yrkesskicklighet och ett personligt bemötande strävar vi efter att leverera arbeten med hög kvalitet, något som uppskattas av våra kunder i Luleå och övriga delar av norra Sverige.</p>
             </div>
             <Button asChild size="lg" className="mt-10 px-8 py-6 text-lg"><Link href="#kontakt">Kontakt</Link></Button>
           </div>
@@ -221,7 +226,7 @@ function ReferencesSection() {
          <Card className="mt-10 w-full border-slate-200 overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
           <div className="grid md:grid-cols-2 items-center">
             <div className="relative aspect-video md:aspect-auto md:h-full">
-              <Image src="/skyline.jpeg" alt="Fönsterfogning och fasadtätning i Umeå - energieffektiv ljudtätning och fuktskydd" fill className="object-cover" />
+              <Image src="/skyline.jpeg" alt="Fönsterfogning och fasadtätning - energieffektiv ljudtätning och fuktskydd" fill className="object-cover" />
             </div>
             <div className="p-8">
                 <h3 className="font-headline text-2xl font-bold">Specialfastigheter</h3>
@@ -244,7 +249,7 @@ function ContactSection() {
                 <div>
                     <h2 className="font-headline text-3xl md:text-5xl font-bold tracking-tight">Kontakt</h2>
                     <p className="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed">
-                        Har du frågor eller vill du ha en offert? Kontakta oss så återkommer vi så snart som möjligt.
+                        Har du frågor eller vill du ha en offert för arbete i Luleå? Kontakta oss så återkommer vi så snart som möjligt.
                     </p>
                     <div className="mt-10 space-y-8">
                         <div className="flex items-start gap-5">
@@ -271,7 +276,7 @@ function ContactSection() {
     );
 }
 
-export default function Home() {
+export default function LuleåPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
@@ -287,5 +292,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

@@ -29,7 +29,7 @@ export function AppFooter() {
                 </a>
             </div>
           </div>
-          <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-10">
+          <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-10">
             <div>
               <h4 className="font-semibold mb-5 font-headline text-lg text-white">Länkar</h4>
               <ul className="space-y-3">
@@ -50,6 +50,17 @@ export function AppFooter() {
                 <li><Link href="/tjanster/nyproduktion#brandtatning" className="hover:text-orange-400 transition-colors text-sm text-slate-300">Brandtätning</Link></li>
                 <li><Link href="/tjanster/nyproduktion#ljudtatning" className="hover:text-orange-400 transition-colors text-sm text-slate-300">Ljudtätning</Link></li>
                 <li><Link href="/tjanster/nyproduktion#sagverksmiljoer" className="hover:text-orange-400 transition-colors text-sm text-slate-300">Sågverksmiljöer</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-5 font-headline text-lg text-white">Vi arbetar i</h4>
+              <ul className="space-y-3">
+                <li><Link href="/" className="hover:text-orange-400 transition-colors text-sm text-slate-300">Umeå</Link></li>
+                <li><Link href="/sundsvall" className="hover:text-orange-400 transition-colors text-sm text-slate-300">Sundsvall</Link></li>
+                <li><Link href="/ornskoldsvik" className="hover:text-orange-400 transition-colors text-sm text-slate-300">Örnsköldsvik</Link></li>
+                <li><Link href="/skelleftea" className="hover:text-orange-400 transition-colors text-sm text-slate-300">Skellefteå</Link></li>
+                <li><Link href="/pitea" className="hover:text-orange-400 transition-colors text-sm text-slate-300">Piteå</Link></li>
+                <li><Link href="/lulea" className="hover:text-orange-400 transition-colors text-sm text-slate-300">Luleå</Link></li>
               </ul>
             </div>
           </div>
