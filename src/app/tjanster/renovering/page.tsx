@@ -2,11 +2,15 @@ import { AppHeader } from "@/components/app-header";
 import { AppFooter } from "@/components/app-footer";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const ServiceDetail = ({ id, title, children }: { id: string, title: string, children: React.ReactNode }) => (
-  <div id={id} className="max-w-3xl mx-auto scroll-mt-20">
-    <h2 className="font-headline text-2xl md:text-3xl font-bold">{title}</h2>
-    <div className="mt-4 text-lg text-muted-foreground space-y-4">{children}</div>
+  <div id={id} className="max-w-4xl mx-auto scroll-mt-20">
+    <h2 className="font-headline text-2xl md:text-3xl font-bold text-center flex items-center justify-center gap-4">
+      <span className="w-1 h-8 bg-orange-500"></span>
+      {title}
+    </h2>
+    <div className="mt-6 text-lg text-slate-600 space-y-4">{children}</div>
   </div>
 );
 
@@ -15,13 +19,25 @@ export default function RenoveringPage() {
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-1">
-        <section className="py-16 md:py-24 bg-secondary">
+        <section className="py-20 md:py-28 bg-slate-50">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto">
-               <h1 className="font-headline text-4xl md:text-5xl font-bold">Renovering</h1>
-               <p className="mt-4 text-lg text-muted-foreground mb-12">Betydelsen av fogning och tätning vid renoveringar i befintliga fastigheter är stor. Med noggrant utvalda material, korrekt dimensionering och lång erfarenhet skapar Umefog hållbara lösningar som förebygger fortsatta skador och minskar risken för kostsamma framtida åtgärder.</p>
+            <div className="max-w-4xl mx-auto">
+               <h1 className="font-headline text-4xl md:text-5xl font-bold text-center">Renovering</h1>
+               <p className="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed">Betydelsen av fogning och tätning vid renoveringar i befintliga fastigheter är stor. Med noggrant utvalda material, korrekt dimensionering och lång erfarenhet skapar Umefog hållbara lösningar som förebygger fortsatta skador och minskar risken för kostsamma framtida åtgärder.</p>
+               
+               <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
+                 <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                   <Image src="/IMG_7036.jpg" alt="Renoveringsarbete" fill className="object-cover" />
+                 </div>
+                 <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                   <Image src="/IMG_6763.jpg" alt="Renoveringsarbete" fill className="object-cover" />
+                 </div>
+                 <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                   <Image src="/IMG_4105.jpg" alt="Renoveringsarbete" fill className="object-cover" />
+                 </div>
+               </div>
             </div>
-            <div className="space-y-16 text-center">
+            <div className="space-y-20 mt-20">
                 <ServiceDetail id="fasadfog" title="Renovering av fasadfog">
                     <p>Fastigheter med fasader av tegel, puts eller betongelement behöver med tiden få sina fogar renoverade för att behålla ett tätt och skyddande klimatskal. Eftersom fasaden påverkas av temperaturväxlingar och rör sig är fogen flexibel och anpassas efter dessa rörelser. Vid renovering av befintliga fastigheter avlägsnas gamla, uttjänta fogar och ersätts med nya för att återställa fasadens täthet och funktion.</p>
                     <p>Rätt utförd fogrenovering spelar en central roll i att förhindra vatten- och luftläckage, förbättra fastighetens energieffektivitet och säkra ett långsiktigt skydd mot fuktskador. Det är en viktig del i att bevara en hållbar fastighet som står emot både väder och vind.</p>
@@ -50,8 +66,8 @@ export default function RenoveringPage() {
                     <p>Umefog har specialkompetens inom arbete i sågverksindustrier och lokaler för virkestorkar. Det är miljöer som ställer extremt höga krav på fogarna då de utsätts för mycket höga temperaturer på uppemot 100 grader samt syror som successivt bryter ner materialet vilket gör att de ofta är utslitna redan efter cirka tre år.</p>
                     <p>Om fogarna inte underhålls regelbundet riskerar stora mängder värme att läcka ut vilket leder till onödig energiförlust och sämre torkeffektivitet. Det i sin tur förlänger torktiden för virket och påverkar både produktion och ekonomi.</p>
                 </ServiceDetail>
-                <div className="text-center mt-16">
-                    <Button size="lg" asChild><Link href="/#kontakt">Kontakt</Link></Button>
+                <div className="text-center mt-20 max-w-4xl mx-auto">
+                    <Button size="lg" asChild className="px-8 py-6 text-lg"><Link href="/#kontakt">Kontakt</Link></Button>
                 </div>
             </div>
           </div>

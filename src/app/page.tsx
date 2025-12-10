@@ -29,7 +29,6 @@ import {
   User,
   Building
 } from "lucide-react";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ContactForm } from "@/components/contact-form";
 
 const serviceCards: { icon: LucideIcon; title: string; description: string; href: string; }[] = [
@@ -68,28 +67,24 @@ const byggforetag = ["OF Bygg AB", "Contractor Bygg I Umeå AB", "Prefabmästarn
 const sagverk = ["Setra Trävaror AB", "Norra Timber AB"];
 
 function HeroSection() {
-  const heroImage = PlaceHolderImages.find(img => img.id === 'hero-background');
   return (
-    <section className="relative h-[70vh] min-h-[450px] flex items-center justify-center text-center text-primary-foreground">
-      {heroImage && (
-        <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
-          fill
-          className="object-cover"
-          priority
-          data-ai-hint={heroImage.imageHint}
-        />
-      )}
-      <div className="absolute inset-0 bg-foreground/70" />
-      <div className="relative z-10 max-w-4xl px-4">
-        <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+    <section className="relative h-[75vh] min-h-[500px] flex items-center justify-center text-center text-white">
+      <Image
+        src="/Tullkammaren.jpeg"
+        alt="Tullkammaren - K-märkt fastighet i Umeå"
+        fill
+        className="object-cover brightness-75"
+        priority
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/50 to-slate-900/70" />
+      <div className="relative z-10 max-w-4xl px-6">
+        <h1 className="font-headline text-4xl sm:text-5xl md:text-7xl font-bold leading-tight tracking-tight">
           Specialister på tätning och fogning
         </h1>
-        <p className="mt-4 text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto">
+        <p className="mt-6 text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed">
            Umefog är specialister på tätning och fogning i både nyproduktion och befintliga fastigheter som flerbostadshus, kommersiella fastigheter och industrimiljöer, med särskild kompetens inom sågverksmiljöer.
         </p>
-        <Button asChild size="lg" className="mt-8">
+        <Button asChild size="lg" className="mt-10 text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all">
           <Link href="#kontakt">Kontakta oss</Link>
         </Button>
       </div>
@@ -99,29 +94,29 @@ function HeroSection() {
 
 function ServicesSection() {
   return (
-    <section id="tjanster" className="py-16 md:py-24 bg-background">
+    <section id="tjanster" className="py-20 md:py-28 bg-white">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">Våra tjänster</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <h2 className="font-headline text-3xl md:text-5xl font-bold tracking-tight">Våra tjänster</h2>
+          <p className="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed">
             Vi utför uppdrag från Kiruna i norr till Sundsvall i söder. Med rätt material och lång erfarenhet skapar vi hållbara lösningar som skyddar fastigheter mot fukt, värmeläckage, brand och ljud.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {serviceCards.map((service) => (
-            <Card key={service.title} className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300">
+            <Card key={service.title} className="flex flex-col text-center items-center border-slate-200 hover:shadow-xl hover:border-orange-200 transition-all duration-300 group">
               <CardHeader className="items-center">
-                <div className="bg-primary/10 p-4 rounded-full">
-                  <service.icon className="w-8 h-8 text-primary" />
+                <div className="bg-orange-50 p-5 rounded-2xl group-hover:bg-orange-100 transition-colors">
+                  <service.icon className="w-9 h-9 text-orange-500" />
                 </div>
-                <CardTitle className="font-headline text-xl pt-2">{service.title}</CardTitle>
+                <CardTitle className="font-headline text-xl pt-4">{service.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow">
-                <p className="text-muted-foreground">{service.description}</p>
+                <p className="text-slate-600">{service.description}</p>
               </CardContent>
               <CardFooter>
-                <Button variant="link" asChild className="p-0 h-auto text-base">
-                  <Link href={service.href}>Läs mer</Link>
+                <Button variant="link" asChild className="p-0 h-auto text-base text-orange-500 hover:text-orange-600">
+                  <Link href={service.href}>Läs mer →</Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -134,24 +129,24 @@ function ServicesSection() {
 
 function HowItWorksSection() {
   return (
-    <section id="hur-det-gar-till" className="py-16 md:py-24 bg-secondary">
+    <section id="hur-det-gar-till" className="py-20 md:py-28 bg-slate-50">
       <div className="container max-w-4xl mx-auto">
         <div className="text-center">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">Så går det till</h2>
-          <p className="mt-4 text-lg text-muted-foreground">Vanliga frågor och svar om vår process och våra tjänster.</p>
+          <h2 className="font-headline text-3xl md:text-5xl font-bold tracking-tight">Så går det till</h2>
+          <p className="mt-6 text-lg md:text-xl text-slate-600">Vanliga frågor och svar om vår process och våra tjänster.</p>
         </div>
-        <Accordion type="single" collapsible className="w-full mt-12">
+        <Accordion type="single" collapsible className="w-full mt-14">
           {faqItems.map((item, index) => (
-            <AccordionItem value={`item-${index}`} key={index}>
-              <AccordionTrigger className="text-lg text-left hover:no-underline">{item.question}</AccordionTrigger>
-              <AccordionContent className="text-base text-muted-foreground">
+            <AccordionItem value={`item-${index}`} key={index} className="border-slate-200">
+              <AccordionTrigger className="text-lg text-left hover:no-underline hover:text-orange-500 transition-colors py-5">{item.question}</AccordionTrigger>
+              <AccordionContent className="text-base text-slate-600 leading-relaxed pb-6">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
-        <div className="text-center mt-12">
-          <Button size="lg" asChild><Link href="#kontakt">Kontakt</Link></Button>
+        <div className="text-center mt-14">
+          <Button size="lg" asChild className="px-8 py-6 text-lg"><Link href="#kontakt">Kontakt</Link></Button>
         </div>
       </div>
     </section>
@@ -159,25 +154,22 @@ function HowItWorksSection() {
 }
 
 function AboutSection() {
-  const aboutImage = PlaceHolderImages.find(img => img.id === 'about-johan');
   return (
-    <section id="om-oss" className="py-16 md:py-24 bg-background">
+    <section id="om-oss" className="py-20 md:py-28 bg-white">
       <div className="container">
-        <div className="grid md:grid-cols-5 gap-8 md:gap-16 items-center">
+        <div className="grid md:grid-cols-5 gap-12 md:gap-20 items-center">
           <div className="md:col-span-2">
-            {aboutImage && (
-              <div className="aspect-[3/4] relative rounded-lg overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
-                <Image src={aboutImage.imageUrl} alt={aboutImage.description} fill className="object-cover" data-ai-hint={aboutImage.imageHint} sizes="(max-width: 768px) 100vw, 40vw" />
-              </div>
-            )}
+            <div className="aspect-[3/4] relative rounded-2xl overflow-hidden shadow-2xl">
+              <Image src="/IMG_7661.jpg" alt="Umefog fogningsarbete" fill className="object-cover" sizes="(max-width: 768px) 100vw, 40vw" />
+            </div>
           </div>
           <div className="md:col-span-3">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">Om oss</h2>
-            <div className="mt-6 text-lg text-muted-foreground space-y-4">
+            <h2 className="font-headline text-3xl md:text-5xl font-bold tracking-tight">Om oss</h2>
+            <div className="mt-8 text-lg text-slate-600 space-y-5 leading-relaxed">
               <p>Johan Bergman har en bakgrund som arbetande konsult inom byggbranchen och grundade Umefog 2020 med ambitionen att erbjuda professionella fognings- och tätningstjänster till fastighetsägare och byggföretag i norra Sverige. Företaget består idag av ett mindre team och arbetar med alla typer av fastigheter som flerbostadshus, kommersiella fastigheter och industrilokaler, med särskild kompetens inom sågverksmiljöer och andra krävande industrimiljöer.</p>
               <p>För Umefog är långsiktiga kundrelationer en självklar del av verksamheten. Genom tydlig kommunikation, hög yrkesskicklighet och ett personligt bemötande strävar företaget efter att leverera arbeten med hög kvalitet, något som uppskattas av kunderna och bidrar till ett bra samarbete.</p>
             </div>
-            <Button asChild size="lg" className="mt-8"><Link href="#kontakt">Kontakt</Link></Button>
+            <Button asChild size="lg" className="mt-10 px-8 py-6 text-lg"><Link href="#kontakt">Kontakt</Link></Button>
           </div>
         </div>
       </div>
@@ -186,65 +178,64 @@ function AboutSection() {
 }
 
 function ReferencesSection() {
-  const tullkammarenImage = PlaceHolderImages.find(img => img.id === 'tullkammaren');
   return (
-    <section id="referenser" className="py-16 md:py-24 bg-secondary">
+    <section id="referenser" className="py-20 md:py-28 bg-slate-50">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">Referenser</h2>
+          <h2 className="font-headline text-3xl md:text-5xl font-bold tracking-tight">Referenser</h2>
         </div>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-          <Card>
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+          <Card className="border-slate-200 hover:shadow-lg transition-shadow">
             <CardHeader>
-              <User className="w-8 h-8 text-primary mb-2" />
+              <User className="w-9 h-9 text-orange-500 mb-3" />
               <CardTitle className="font-headline text-xl">BRF</CardTitle>
-              <CardDescription>HSB Bostadsrättsförening Flyttfågeln i Umeå</CardDescription>
+              <CardDescription className="text-slate-600">HSB Bostadsrättsförening Flyttfågeln i Umeå</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground">Fogrenovering av fogar på mellan betongblock på inglasade balkonger som börjat läcka in regnvatten.</p>
-              <div className="mt-4 text-sm space-y-1">
+              <p className="text-sm text-slate-600 leading-relaxed">Fogrenovering av fogar på mellan betongblock på inglasade balkonger som börjat läcka in regnvatten.</p>
+              <div className="mt-5 text-sm space-y-1 text-slate-700">
                 <p className="font-semibold">Kontakt: Mats Framell</p>
                 <p>073-028 22 48</p>
                 <p>vicevard3229@outlook.com</p>
               </div>
             </CardContent>
           </Card>
-          <Card className="md:col-span-1 lg:col-span-1">
+          <Card className="md:col-span-1 lg:col-span-1 border-slate-200 hover:shadow-lg transition-shadow">
             <CardHeader>
-              <Building className="w-8 h-8 text-primary mb-2" />
+              <Building className="w-9 h-9 text-orange-500 mb-3" />
               <CardTitle className="font-headline text-xl">Byggföretag</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+              <ul className="space-y-2 text-slate-600 list-disc list-inside text-sm">
                 {byggforetag.map(name => <li key={name}>{name}</li>)}
               </ul>
             </CardContent>
           </Card>
-          <Card>
+          <Card className="border-slate-200 hover:shadow-lg transition-shadow">
             <CardHeader>
-              <Flame className="w-8 h-8 text-primary mb-2" />
+              <Flame className="w-9 h-9 text-orange-500 mb-3" />
               <CardTitle className="font-headline text-xl">Sågverk</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+              <ul className="space-y-2 text-slate-600 list-disc list-inside text-sm">
                 {sagverk.map(name => <li key={name}>{name}</li>)}
               </ul>
             </CardContent>
           </Card>
         </div>
-         <Card className="mt-8 w-full">
+         <Card className="mt-10 w-full border-slate-200 overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
           <div className="grid md:grid-cols-2 items-center">
-            {tullkammarenImage && <div className="relative aspect-video md:aspect-auto md:h-full rounded-t-lg md:rounded-l-lg md:rounded-r-none overflow-hidden">
-                <Image src={tullkammarenImage.imageUrl} alt={tullkammarenImage.description} fill className="object-cover" data-ai-hint={tullkammarenImage.imageHint} />
-            </div>}
-            <div className="p-6">
-                <h3 className="font-headline text-xl font-bold">Specialfastigheter</h3>
-                <p className="mt-2 text-muted-foreground">På den K-märkta fastigheten Tullkammaren i Umeå från 1901 utförde Umefog fönsterfogning både invändigt och utvändigt. I det projektet ställdes höga krav, bland annat när det gällde kulören som specialbeställdes för att stämma överens med fastighetens uttryck.</p>
+            <div className="relative aspect-video md:aspect-auto md:h-full">
+              <Image src="/IMG_3828.jpg" alt="Tullkammaren - K-märkt fastighet i Umeå" fill className="object-cover" />
+            </div>
+            <div className="p-8">
+                <h3 className="font-headline text-2xl font-bold">Specialfastigheter</h3>
+                <p className="mt-4 text-slate-600 leading-relaxed">På den K-märkta fastigheten Tullkammaren i Umeå från 1901 utförde Umefog fönsterfogning både invändigt och utvändigt. I det projektet ställdes höga krav, bland annat när det gällde kulören som specialbeställdes för att stämma överens med fastighetens uttryck.</p>
             </div>
           </div>
         </Card>
-         <div className="text-center mt-12">
-            <Button size="lg" asChild><Link href="#kontakt">Kontakt</Link></Button>
+         <div className="text-center mt-14">
+            <Button size="lg" asChild className="px-8 py-6 text-lg"><Link href="#kontakt">Kontakt</Link></Button>
         </div>
       </div>
     </section>
@@ -253,27 +244,27 @@ function ReferencesSection() {
 
 function ContactSection() {
     return (
-        <section id="kontakt" className="py-16 md:py-24 bg-background">
-            <div className="container grid md:grid-cols-2 gap-12 items-center">
+        <section id="kontakt" className="py-20 md:py-28 bg-white">
+            <div className="container grid md:grid-cols-2 gap-16 items-start">
                 <div>
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold">Kontakt</h2>
-                    <p className="mt-4 text-lg text-muted-foreground">
-                        Har du frågor eller vill du ha en offert? Fyll i formuläret så återkommer vi så snart som möjligt. Du kan också nå oss direkt via telefon.
+                    <h2 className="font-headline text-3xl md:text-5xl font-bold tracking-tight">Kontakt</h2>
+                    <p className="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed">
+                        Har du frågor eller vill du ha en offert? Kontakta oss så återkommer vi så snart som möjligt.
                     </p>
-                    <div className="mt-8 space-y-6">
-                        <div className="flex items-center gap-4">
-                            <div className="bg-primary/10 p-3 rounded-full"><Phone className="w-6 h-6 text-primary"/></div>
+                    <div className="mt-10 space-y-8">
+                        <div className="flex items-start gap-5">
+                            <div className="bg-orange-50 p-4 rounded-2xl"><Phone className="w-7 h-7 text-orange-500"/></div>
                             <div>
-                                <h3 className="font-semibold text-lg">Johan Bergman</h3>
-                                <a href="tel:0761355152" className="text-muted-foreground hover:text-primary transition-colors">076-135 51 52</a>
+                                <h3 className="font-semibold text-xl mb-1">Johan Bergman</h3>
+                                <a href="tel:0761355152" className="text-lg text-slate-600 hover:text-orange-500 transition-colors">076-135 51 52</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <Card className="shadow-lg">
-                        <CardHeader>
-                            <CardTitle className="font-headline">Skicka ett meddelande</CardTitle>
+                    <Card className="shadow-xl border-slate-200">
+                        <CardHeader className="pb-6">
+                            <CardTitle className="font-headline text-2xl">Kontaktuppgifter</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <ContactForm />

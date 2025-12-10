@@ -1,103 +1,58 @@
-"use client";
-
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import { useEffect, useState } from "react";
-
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Namn måste vara minst 2 tecken." }),
-  email: z.string().email({ message: "Ogiltig e-postadress." }),
-  message: z.string().min(10, { message: "Meddelandet måste vara minst 10 tecken." }),
-});
+import { Card } from "@/components/ui/card";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export function ContactForm() {
-    const { toast } = useToast();
-    const [isClient, setIsClient] = useState(false);
-
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-
-
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
-        defaultValues: {
-            name: "",
-            email: "",
-            message: "",
-        },
-    });
-
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log("Form submitted:", values);
-        toast({
-            title: "Meddelande skickat!",
-            description: "Tack för ditt meddelande. Vi återkommer så snart som möjligt.",
-        });
-        form.reset();
-    }
-
-    if (!isClient) {
-        return null;
-    }
-
     return (
-        <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>Namn</FormLabel>
-                            <FormControl>
-                                <Input placeholder="Ditt namn" {...field} />
-                            </FormControl>                            
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>E-post</FormLabel>
-                            <FormControl>
-                                <Input placeholder="din.epost@exempel.com" type="email" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>Meddelande</FormLabel>
-                            <FormControl>
-                                <Textarea placeholder="Hur kan vi hjälpa dig?" className="min-h-[120px]" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <Button type="submit" className="w-full" size="lg">Skicka meddelande</Button>
-            </form>
-        </Form>
+        <div className="space-y-6">
+            <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold mb-2">Kontakta oss</h3>
+                <p className="text-muted-foreground">Vi hjälper dig gärna med ditt projekt</p>
+            </div>
+            
+            <div className="grid gap-6">
+                <Card className="p-6">
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-primary/10 rounded-lg">
+                            <Mail className="h-6 w-6 text-primary" />
+                        </div>
+                        <div>
+                            <h4 className="font-semibold mb-1">E-post</h4>
+                            <a href="mailto:info@umefog.se" className="text-muted-foreground hover:text-primary transition-colors">
+                                info@umefog.se
+                            </a>
+                        </div>
+                    </div>
+                </Card>
+
+                <Card className="p-6">
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-primary/10 rounded-lg">
+                            <Phone className="h-6 w-6 text-primary" />
+                        </div>
+                        <div>
+                            <h4 className="font-semibold mb-1">Telefon</h4>
+                            <a href="tel:+46123456789" className="text-muted-foreground hover:text-primary transition-colors">
+                                +46 12 345 67 89
+                            </a>
+                        </div>
+                    </div>
+                </Card>
+
+                <Card className="p-6">
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-primary/10 rounded-lg">
+                            <MapPin className="h-6 w-6 text-primary" />
+                        </div>
+                        <div>
+                            <h4 className="font-semibold mb-1">Adress</h4>
+                            <p className="text-muted-foreground">
+                                Företagsgatan 1<br />
+                                123 45 Umeå
+                            </p>
+                        </div>
+                    </div>
+                </Card>
+            </div>
+        </div>
     );
 }

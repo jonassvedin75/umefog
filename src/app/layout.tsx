@@ -5,6 +5,9 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Umefog Webbplats',
   description: 'Specialister på tätning och fogning i norra Sverige.',
+  icons: {
+    icon: '/Umefog_logo.png',
+  },
 };
 
 export default function RootLayout({
