@@ -71,11 +71,6 @@ export function AppHeader() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="border-slate-200">
-              <SheetClose asChild>
-                <Link href="/" className="mr-6 flex items-center space-x-2">
-                   <Image src="/Umefogsvart.png" alt="Umefog logotyp" width={100} height={40} className="w-[100px] h-auto" />
-                </Link>
-              </SheetClose>
               <div className="flex flex-col space-y-3 mt-6">
                 <SheetClose asChild>
                   <Link href="/tjanster" className="font-medium text-lg hover:text-orange-500 transition-colors">Tjänster</Link>
