@@ -31,7 +31,7 @@ export function AppHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90 shadow-sm">
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <Image src="/Umefog_logo.png" alt="Umefog logotyp" width={80} height={32} className="w-[80px] h-auto" priority />
+          <Image src="/Umefogsvart.png" alt="Umefog logotyp" width={80} height={32} className="w-[80px] h-auto" priority />
         </Link>
         <nav className="hidden md:flex items-center space-x-1 text-base font-medium flex-1 justify-center">
           <DropdownMenu>
@@ -73,7 +73,7 @@ export function AppHeader() {
             <SheetContent side="right" className="border-slate-200">
               <SheetClose asChild>
                 <Link href="/" className="mr-6 flex items-center space-x-2">
-                   <Image src="/Umefog_logo.png" alt="Umefog logotyp" width={100} height={40} className="w-[100px] h-auto" />
+                   <Image src="/Umefogsvart.png" alt="Umefog logotyp" width={100} height={40} className="w-[100px] h-auto" />
                 </Link>
               </SheetClose>
               <div className="flex flex-col space-y-3 mt-6">

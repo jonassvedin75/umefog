@@ -19,7 +19,7 @@ export function AppFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="space-y-6">
              <Link href="/">
-               <Image src="/umefog-logo-vit.png" alt="Umefog logotyp" width={140} height={56} className="w-[140px] h-auto" />
+               <Image src="/Umefogvit.png" alt="Umefog logotyp" width={140} height={56} className="w-[140px] h-auto" />
              </Link>
             <div className="space-y-3">
                 <p className="font-semibold text-lg">Johan Bergman</p>

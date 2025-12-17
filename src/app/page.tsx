@@ -32,7 +32,7 @@ import {
 import { ContactForm } from "@/components/contact-form";
 
 const serviceCards: { icon: LucideIcon; title: string; description: string; href: string; }[] = [
-  { icon: Building2, title: "Fasadfogning", description: "Tätning och skydd av fasader i tegel, puts och betongelement.", href: "/tjanster/nyproduktion#fasadfogning" },
+  { icon: Building2, title: "Fasadfogning", description: "Elastisk tätning av fasader i tegel, puts och betongelement.", href: "/tjanster/nyproduktion#fasadfogning" },
   { icon: Droplets, title: "Golvfogning", description: "Fogning av industrigolv där täthet krävs vid spolning och vätskeexponering.", href: "/tjanster/nyproduktion#golvfogning" },
   { icon: DoorOpen, title: "Dörr- och fönsterfogning", description: "Energieffektiv tätning runt dörrar och fönster i alla typer av fastigheter.", href: "/tjanster/nyproduktion#dorr-fonster" },
   { icon: Bath, title: "Kök- och badrumsfogning", description: "Fuktanpassad fogning i kök och våtutrymmen.", href: "/tjanster/nyproduktion#kok-badrum" },
@@ -79,10 +79,10 @@ function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/50 to-slate-900/70" />
       <div className="relative z-10 max-w-4xl px-6">
         <h1 className="font-headline text-4xl sm:text-5xl md:text-7xl font-bold leading-tight tracking-tight">
-          Specialister på tätning och fogning i Umeå
+          Specialister på fogning och brandtätning i Umeå
         </h1>
         <p className="mt-6 text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed">
-           Umefog är specialister på fasadfogning, brandtätning och ljudtätning i Umeå och norra Sverige. Vi erbjuder professionellt fuktskydd och skydd mot värmeläckage för både nyproduktion och befintliga fastigheter.
+           Umefog är specialister på fasadfogning, brandtätning och ljudtätning i Umeå och norra Sverige. Vi erbjuder professionella tjänster inom fogtätning och passivt brandskydd för både nyproduktion och befintliga fastigheter.
         </p>
         <Button asChild size="lg" className="mt-10 text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all">
           <Link href="#kontakt">Kontakta oss</Link>
@@ -178,6 +178,8 @@ function AboutSection() {
 }
 
 function ReferencesSection() {
+  const newLocal = <CardContent>
+  </CardContent>;
   return (
     <section id="referenser" className="py-20 md:py-28 bg-slate-50">
       <div className="container">
@@ -191,9 +193,7 @@ function ReferencesSection() {
               <CardTitle className="font-headline text-xl">BRF</CardTitle>
               <CardDescription className="text-slate-600">HSB Bostadsrättsförening Flyttfågeln i Umeå</CardDescription>
             </CardHeader>
-            <CardContent>
-              <p className="text-sm text-slate-600 leading-relaxed">Fogrenovering av fogar på mellan betongblock på inglasade balkonger som börjat läcka in regnvatten.</p>
-            </CardContent>
+            {newLocal}
           </Card>
           <Card className="md:col-span-1 lg:col-span-1 border-slate-200 hover:shadow-lg transition-shadow">
             <CardHeader>

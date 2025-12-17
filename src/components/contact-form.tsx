@@ -17,8 +17,8 @@ export function ContactForm() {
                         </div>
                         <div>
                             <h4 className="font-semibold mb-1">E-post</h4>
-                            <a href="mailto:info@umefog.se" className="text-muted-foreground hover:text-primary transition-colors">
-                                info@umefog.se
+                            <a href="mailto:umefog@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                                umefog@gmail.com
                             </a>
                         </div>
                     </div>

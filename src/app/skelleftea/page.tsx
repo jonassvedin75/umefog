@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 };
 
 const serviceCards: { icon: LucideIcon; title: string; description: string; }[] = [
-  { icon: Building2, title: "Fasadfogning", description: "Tätning och skydd av fasader i tegel, puts och betongelement." },
+  { icon: Building2, title: "Fasadfogning", description: "Elastisk tätning av fasader i tegel, puts och betongelement." },
   { icon: Droplets, title: "Golvfogning", description: "Fogning av industrigolv där täthet krävs vid spolning och vätskeexponering." },
   { icon: DoorOpen, title: "Dörr- och fönsterfogning", description: "Energieffektiv tätning runt dörrar och fönster i alla typer av fastigheter." },
   { icon: Bath, title: "Kök- och badrumsfogning", description: "Fuktanpassad fogning i kök och våtutrymmen." },
@@ -84,10 +84,10 @@ function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/50 to-slate-900/70" />
       <div className="relative z-10 max-w-4xl px-6">
         <h1 className="font-headline text-4xl sm:text-5xl md:text-7xl font-bold leading-tight tracking-tight">
-          Specialister på tätning och fogning i Skellefteå
+          Specialister på fogning och brandtätning i Skellefteå
         </h1>
         <p className="mt-6 text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed">
-           Umefog är specialister på fasadfogning, brandtätning och ljudtätning i Skellefteå och Skellefteå kommun. Vi erbjuder professionellt fuktskydd och skydd mot värmeläckage för alla typer av fastigheter i regionen.
+           Umefog är specialister på fasadfogning, brandtätning och ljudtätning i Skellefteå och Skellefteå kommun. Vi erbjuder professionella tjänster inom fogtätning och passivt brandskydd för alla typer av fastigheter i regionen.
         </p>
         <Button asChild size="lg" className="mt-10 text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all">
           <Link href="#kontakt">Kontakta oss</Link>

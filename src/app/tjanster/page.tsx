@@ -28,7 +28,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ContactForm } from "@/components/contact-form";
 
 const serviceCards: { icon: LucideIcon; title: string; description: string; href: string; }[] = [
-  { icon: Building2, title: "Fasadfogning", description: "Tätning och skydd av fasader i tegel, puts och betongelement.", href: "/tjanster/nyproduktion#fasadfogning" },
+  { icon: Building2, title: "Fasadfogning", description: "Elastisk tätning av fasader i tegel, puts och betongelement.", href: "/tjanster/nyproduktion#fasadfogning" },
   { icon: Droplets, title: "Golvfogning", description: "Fogning av industrigolv där täthet krävs vid spolning och vätskeexponering.", href: "/tjanster/nyproduktion#golvfogning" },
   { icon: DoorOpen, title: "Dörr- och fönsterfogning", description: "Energieffektiv tätning runt dörrar och fönster i alla typer av fastigheter.", href: "/tjanster/nyproduktion#dorr-fonster" },
   { icon: Bath, title: "Kök- och badrumsfogning", description: "Fuktanpassad fogning i kök och våtutrymmen.", href: "/tjanster/nyproduktion#kok-badrum" },
