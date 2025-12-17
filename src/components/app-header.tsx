@@ -8,7 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from "@/components/ui/sheet";
 import { ChevronDown, Menu } from "lucide-react";
 import React from "react";
 import Image from "next/image";
@@ -71,6 +71,7 @@ export function AppHeader() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="border-slate-200">
+              <SheetTitle className="sr-only">Meny</SheetTitle>
               <div className="flex flex-col space-y-3 mt-6">
                 <SheetClose asChild>
                   <Link href="/tjanster" className="font-medium text-lg hover:text-orange-500 transition-colors">Tjänster</Link>
