@@ -21,6 +21,7 @@ export function AppFooter() {
              <Link href="/">
                <Image src="/Umefogvit.png" alt="Umefog logotyp" width={140} height={56} className="w-[140px] h-auto" />
              </Link>
+            <p className="text-sm text-slate-400">Org.nr: 559237-2881</p>
             <div className="space-y-3">
                 <p className="font-semibold text-lg">Johan Bergman</p>
                 <a href="tel:0761355152" className="flex items-center gap-3 hover:text-orange-400 text-slate-300 transition-colors group">
@@ -53,7 +54,7 @@ export function AppFooter() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-5 font-headline text-lg text-white">Vi arbetar i</h4>
+              <h4 className="font-semibold mb-5 font-headline text-lg text-white">Vi arbetar bland annat i</h4>
               <ul className="space-y-3">
                 <li><Link href="/" className="hover:text-orange-400 transition-colors text-sm text-slate-300">Umeå</Link></li>
                 <li><Link href="/sundsvall" className="hover:text-orange-400 transition-colors text-sm text-slate-300">Sundsvall</Link></li>

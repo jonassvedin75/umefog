@@ -30,6 +30,7 @@ import {
   Building
 } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
+import { LogoCarousel } from "@/components/logo-carousel";
 
 const serviceCards: { icon: LucideIcon; title: string; description: string; href: string; }[] = [
   { icon: Building2, title: "Fasadfogning", description: "Elastisk tätning av fasader i tegel, puts och betongelement.", href: "/tjanster/nyproduktion#fasadfogning" },
@@ -94,7 +95,7 @@ function HeroSection() {
 
 function ServicesSection() {
   return (
-    <section id="tjanster" className="py-20 md:py-28 bg-white">
+    <section id="tjanster" className="py-12 md:py-20 bg-white">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl md:text-5xl font-bold tracking-tight">Våra tjänster</h2>
@@ -221,7 +222,7 @@ function ReferencesSection() {
          <Card className="mt-10 w-full border-slate-200 overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
           <div className="grid md:grid-cols-2 items-center">
             <div className="relative aspect-video md:aspect-auto md:h-full">
-              <Image src="/skyline.jpeg" alt="Fönsterfogning och fasadtätning i Umeå - energieffektiv ljudtätning och fuktskydd" fill className="object-cover" />
+              <Image src="/Tullkammaren.jpeg" alt="Fönsterfogning och fasadtätning i Umeå - energieffektiv ljudtätning och fuktskydd" fill className="object-cover object-top" />
             </div>
             <div className="p-8">
                 <h3 className="font-headline text-2xl font-bold">Specialfastigheter</h3>
@@ -277,6 +278,7 @@ export default function Home() {
       <AppHeader />
       <main className="flex-1">
         <HeroSection />
+        <LogoCarousel />
         <ServicesSection />
         <HowItWorksSection />
         <AboutSection />

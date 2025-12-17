@@ -31,8 +31,8 @@ export function ContactForm() {
                         </div>
                         <div>
                             <h4 className="font-semibold mb-1">Telefon</h4>
-                            <a href="tel:+46123456789" className="text-muted-foreground hover:text-primary transition-colors">
-                                +46 12 345 67 89
+                            <a href="tel:0761355152" className="text-muted-foreground hover:text-primary transition-colors">
+                                076-135 51 52
                             </a>
                         </div>
                     </div>
@@ -46,8 +46,8 @@ export function ContactForm() {
                         <div>
                             <h4 className="font-semibold mb-1">Adress</h4>
                             <p className="text-muted-foreground">
-                                Företagsgatan 1<br />
-                                123 45 Umeå
+                                Förrådsvägen 22<br />
+                                90132 Umeå
                             </p>
                         </div>
                     </div>
