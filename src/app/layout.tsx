@@ -5,6 +5,9 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Umefog - Fasadfogning & Brandtätning i Umeå | Professionell Fuktskydd',
   description: 'Umefog erbjuder professionell fasadfogning, brandtätning, ljudtätning och skydd mot värmeläckage i Umeå och norra Sverige. Kontakta oss för offert!',
+  verification: {
+    google: 'bueqUCwwZ6R8hpPNHQeWpZwxtH7xtXBUJfgRJ6MUHpA',
+  },
 };
 
 export default function RootLayout({
